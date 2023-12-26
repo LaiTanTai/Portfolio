@@ -1,25 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import { OrbitControls } from '@react-three/drei';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
+const Mainlayout = lazy(()=>import('./layouts/Mainlayout'));
+const Loader = lazy(()=>import("./components/loader/Loader"))
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Suspense fallback={<Loader/>}>
+        <Routes>
+          <Route path='/' element={<Mainlayout/>}/>
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
   );
 }
 

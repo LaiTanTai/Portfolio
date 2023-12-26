@@ -1,0 +1,3 @@
+interface NucleusProps {
+    size: number;
+}

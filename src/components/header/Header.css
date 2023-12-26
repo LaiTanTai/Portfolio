@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'PirulenRegular';
+    src: url('/public/font/pirulen\ rg.otf') format('opentype');
+}
+.Header{
+    padding: 40px 50px 40px 50px;
+    background-color:#000016;
+    color:#01c8ff;
+    text-shadow: 0 0 3px #01c8ff, 0 0 10px #01c8ff, 0 0 20px #01c8ff, 0 0 40px #01c8ff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Header::after {
+    content: ''; /* Cần content để pseudo-element được hiển thị */
+    position: absolute;
+    bottom: -1px; /* Điều chỉnh độ dài của hiệu ứng glow */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Điều chỉnh độ dày của hiệu ứng glow */
+    background: #01c8ff;
+    box-shadow: 0 0 10px #01c8ff, 0 0 20px #01c8ff, 0 0 40px #01c8ff; /* Điều chỉnh mức độ glow */
+}
+.Header_a--Name{
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: 800;
+    font-family: 'PirulenRegular';
+}
+.Header_a--Info{
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    gap: 20px;
+}
+.Header_a--Link{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
