@@ -1,8 +1,14 @@
 import React from "react";
 import Header from "../components/header/Header";
+import Embed from "../components/Embed/Embed";
+import MyImg from "../components/MyImg/MyImg";
 const Mainlayout = ()=>{
     return (
-        <Header/>
+        <Embed>
+            <Header/>
+            <MyImg/>
+        </Embed>
+
     )
 }
 export default Mainlayout

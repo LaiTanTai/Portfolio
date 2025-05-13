@@ -1,0 +1,22 @@
+.Img-cover{
+    width: 100%;
+    height: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image{
+    border-color: white;
+    border-radius: 50%;
+    border-width: 2px;
+    width: 12rem;
+}
+.Img-cover--div{
+    color: white;
+    justify-items: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.img-name{
+    margin-top: 1rem;
+}
